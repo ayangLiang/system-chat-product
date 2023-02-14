@@ -1,0 +1,21 @@
+server:
+  port: 8889
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3308/boot_mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&AllowPublicKeyRetrieval=True
+    username: root
+    password: root
+
+
+mybatis-plus:
+  mapper-locations: mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.example.demo.entity
+
+# key,Use your own key
+SECRET_KEY: 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
+connectTimeout: 60000
+connectionRequestTimeout: 60000
+socketTimeout: 60000
